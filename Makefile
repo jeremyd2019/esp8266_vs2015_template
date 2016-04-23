@@ -16,7 +16,7 @@ $(PROJECT)-0x00000.bin: $(PROJECT)
 	esptool.py elf2image $(BOARDOPTS) $(PROJECT)
 
 $(PROJECT): $(OBJS)
-	$(CXX) $(LDFLAGS) -Wl,-Map=$@.map -o $@ $^ $(LDLIBS)
+	$(CXX) $(LDFLAGS) -Wl,-Map=$@.map -o $@ $** $(LDLIBS)
 
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $<

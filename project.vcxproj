@@ -49,10 +49,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeBuildCommandLine>gmake all</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>nmake all</NMakeBuildCommandLine>
     <NMakeOutput>project</NMakeOutput>
-    <NMakeCleanCommandLine>gmake clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>gmake clean all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>nmake clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>nmake clean all</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>__ets__;_DEBUG</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>D:\esp8266\esp-open-sdk\xtensa-lx106-elf\xtensa-lx106-elf\include;D:\esp8266\esp-open-sdk\xtensa-lx106-elf\xtensa-lx106-elf\sysroot\usr\include</NMakeIncludeSearchPath>
     <ExecutablePath>D:\esp8266\esp-open-sdk\xtensa-lx106-elf\bin;$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
@@ -61,10 +61,10 @@
     <NMakeForcedIncludes>intellisense.h</NMakeForcedIncludes>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <NMakeBuildCommandLine>gmake all</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>nmake all</NMakeBuildCommandLine>
     <NMakeOutput>project</NMakeOutput>
-    <NMakeCleanCommandLine>gmake clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>gmake clean all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>nmake clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>nmake clean all</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>__ets__;NDEBUG</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>D:\esp8266\esp-open-sdk\xtensa-lx106-elf\xtensa-lx106-elf\include;D:\esp8266\esp-open-sdk\xtensa-lx106-elf\xtensa-lx106-elf\sysroot\usr\include</NMakeIncludeSearchPath>
     <ExecutablePath>D:\esp8266\esp-open-sdk\xtensa-lx106-elf\bin;$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
