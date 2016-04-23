@@ -31,4 +31,4 @@ flash: $(PROJECT)-0x00000.bin
 	esptool.py --port COM3 --baud 115200 write_flash $(BOARDOPTS) 0 $(PROJECT)-0x00000.bin 0x10000 $(PROJECT)-0x10000.bin
 
 clean:
-	$(RM) $(PROJECT) $(OBJS) $(PROJECT)-0x00000.bin $(PROJECT)-0x10000.bin
+	$(RM) $(PROJECT) $(OBJS) $(PROJECT)-0x00000.bin $(PROJECT)-0x10000.bin $(PROJECT).log $(PROJECT).map
