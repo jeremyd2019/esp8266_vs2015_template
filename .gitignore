@@ -1,0 +1,7 @@
+*.o
+project
+project-0x*.bin
+*.vcxproj.user
+*.map
+*.log
+obj
