@@ -5,7 +5,13 @@ CXXFLAGS = $(CFLAGS) -fno-rtti -fno-exceptions -std=c++11
 LDLIBS = -nostdlib -Wl,-static -Wl,--gc-sections -Wl,--start-group -lmain -lnet80211 -lwpa -llwip -lpp -lphy -lcrypto -lcirom -lstdc++irom -lnewlibport -lstdc++port -Wl,--end-group -lgcc
 LDFLAGS = -Teagle.app.v6.4096.irom.ld
 BOARDOPTS = -ff 40m -fm qio -fs 32m
+ifeq ($(OS),Windows_NT)
 RM = del
+FixPath = $(subst /,\,$1)
+else
+RM = rm -f
+FixPath = $1
+endif
 
 PROJECT = project
 OBJS = project.o
@@ -31,4 +37,4 @@ flash: $(PROJECT)-0x00000.bin
 	esptool.py --port COM3 --baud 115200 write_flash $(BOARDOPTS) 0 $(PROJECT)-0x00000.bin 0x10000 $(PROJECT)-0x10000.bin
 
 clean:
-	$(RM) $(PROJECT) $(OBJS) $(PROJECT)-0x00000.bin $(PROJECT)-0x10000.bin $(PROJECT).log $(PROJECT).map
+	$(RM) $(PROJECT) $(call FixPath,$(OBJS)) $(PROJECT)-0x00000.bin $(PROJECT)-0x10000.bin $(PROJECT).log $(PROJECT).map
